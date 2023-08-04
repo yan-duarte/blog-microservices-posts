@@ -1,2 +1,1 @@
-# blog-microsservices-posts
-Blog Microsservices - Posts Service
+# Blog Microservices - Posts Service
