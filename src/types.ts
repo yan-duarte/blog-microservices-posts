@@ -7,10 +7,8 @@ export interface Posts {
   }
 }
 
-export interface CustomRequest<B> extends Request {
-  body: B
-}
-
-export interface PostRequestBody {
-  title: string
+export interface PostPostsRequest {
+  body: {
+    title: string
+  }
 }

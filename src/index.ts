@@ -1,7 +1,7 @@
 import express, {Response} from 'express'
 import { json } from 'body-parser'
 import { randomBytes } from 'crypto'
-import { CustomRequest, PostRequestBody, Posts } from './types'
+import { PostPostsRequest, Posts } from './types'
 
 const app = express()
 app.use(json())
@@ -12,7 +12,7 @@ app.get('/posts', (_req, res: Response<Posts>) => {
   res.send(posts)
 });
 
-app.post('/posts', (req: CustomRequest<PostRequestBody>, res: Response<Posts[0]>) => {
+app.post('/posts', (req: PostPostsRequest, res: Response<Posts[0]>) => {
   const id = randomBytes(4).toString('hex')
   const { title } = req.body
 
